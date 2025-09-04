@@ -45,7 +45,7 @@ def generate_narrative(facts, reasoning, max_length=500, temperature=0.5):
     Penalties: {facts['penalties']}
     Audited: {facts['audited']}
     
-    Include these computed values by a tax accountant:
+    With some probability include some of these computed values by a tax accountant:
     gross income: {reasoning['gross_income']}, 
     total deductions: {reasoning['deductions_total']}, 
     taxable income: {reasoning['taxable_income']}, 

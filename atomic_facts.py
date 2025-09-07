@@ -1,7 +1,7 @@
 # domain_logic.py
 import random
 import numpy as np
-from domain_seeds import names, countries, marital_statuses, hobbies, pets, QUESTION_BANK
+from income_tax import names, countries, marital_statuses, hobbies, pets, question_bank
 
 def generate_atomic_facts():
     # Base demographic facts
@@ -85,7 +85,7 @@ def generate_diversity_facts():
 
 def sample_QA(facts):
     num_q = random.choice([2, 3])
-    sampled = random.sample(QUESTION_BANK, num_q)
+    sampled = random.sample(question_bank, num_q)
     qa_list = []
     for q_template in sampled:
         q = q_template["question"].format(**facts)

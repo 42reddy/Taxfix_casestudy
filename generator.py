@@ -103,6 +103,8 @@ def run_single_case(max_depth=4, max_children=2, story_length=500, temperature=0
     reasoning_tree = expand_node(root_node, facts, diversity,
                                  max_depth=max_depth, depth=0, max_children=max_children)
 
+    reasoning_tree = flatten_tree(reasoning_tree)
+
     # Generate first person narrative
     story = generate_story(facts, story_length, temperature)
 
